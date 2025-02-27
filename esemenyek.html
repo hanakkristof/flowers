@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Eseménykezelés</h1>
+  <h2>CSAK az Esemény elkapása</h2>
+  <p>Az eseménykezelő föggvénynek nincs argumentuma</p>
+  <button onclick="koszon()">Köszön</button>
+<hr>
+<h2>Az eseményre, mint objektumra szükségünk van</h2>
+<p>Ha a szülőelemen szeretnénk elkapni az eseményt - szeretnénk tudni, melyik gyerekelemen történt az esemény - delegálás</p>
+<div class="btn.holder" onclick="getcateg(event)">
+  <button id="btn1">1</button>
+  <button id="btn2">2</button>
+  <button id="btn3">3</button>
+  <p>ez nem gomb</p>
+</div>
+
+<hr>
+<h2>Eseményobjektum - DOM objektum - THIS</h2>
+<hr>
+<div class="btn.holder" ></div>
+  <button id="btn11" onclick="getcateg1(this)">1</button>
+  <button id="btn22" onclick="getcateg1(this)">2</button>
+  <button id="btn33" onclick="getcateg1(this)">3</button>
+  <p>ez nem gomb</p>
+</div>
+  <script>
+    function koszon(){
+      alert("Jó reggelt!")
+    }
+
+    function getcateg(e){
+      console.log(e.target);
+      console.log(e.target.textContent);
+      console.log(e.target.tagName);  
+    }
+    
+    
+    function getcateg1(domObj){
+      console.log(domObj);
+       
+    }
+  </script>
+</body>
+</html>
