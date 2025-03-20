@@ -29,8 +29,8 @@
   margin: auto;
   flex-wrap: nowrap;
   max-width: 500px !important;
-
-
+  flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .categories{
@@ -42,7 +42,7 @@
   text-align: center;
   height: 50px;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: row;  
   gap: 10px;
   justify-content: center;
 
